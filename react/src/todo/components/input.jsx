@@ -27,6 +27,7 @@ export function Input({ onSubmit, placeholder, label, defaultValue, onBlur ,setS
         (e) => {
             if (e.key === "Enter") {
                 const value = e.target.value.trim();
+                // Edited By Theja
                 const now = new Date();
                 const currentTimeString = now.toLocaleTimeString();
                 setStartTime(currentTimeString)

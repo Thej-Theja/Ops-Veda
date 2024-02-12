@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 import { REMOVE_COMPLETED_ITEMS } from "../constants";
 
-export function Footer({ todos, dispatch,setEndTime,setStartTime }) {
+export function Footer({ todos, dispatch,setEndTime }) {
     const { pathname: route } = useLocation();
 
     const activeTodos = useMemo(() => todos.filter((todo) => !todo.completed), [todos]);
@@ -14,6 +14,7 @@ export function Footer({ todos, dispatch,setEndTime,setStartTime }) {
 
     const handleClick =()=>{
         removeCompleted()
+        // Updated By Theja
         const now = new Date();
         const currentTimeString = now.toLocaleTimeString();
         setEndTime(currentTimeString)

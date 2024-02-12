@@ -8,6 +8,7 @@ import { TOGGLE_ITEM, REMOVE_ITEM, UPDATE_ITEM } from "../constants";
 export const Item = memo(function Item({ todo, dispatch, index, clrChange, todoSelectedList,setTodoSelectedList }) {
     const [isWritable, setIsWritable] = useState(false);
     const { title, completed, id } = todo;
+    // Updated by Theja
     const changeTitleClr = useRef()
    
 
@@ -16,7 +17,7 @@ export const Item = memo(function Item({ todo, dispatch, index, clrChange, todoS
     const updateItem = useCallback((id, title) => dispatch({ type: UPDATE_ITEM, payload: { id, title } }), [dispatch]);
 
     
-
+// Updated  by Theja
     useEffect(() => {
         if (todoSelectedList.length > 0) {
             if (todo.id === todoSelectedList[todoSelectedList.length - 1]) changeTitleClr.current.style.color = "green"
@@ -41,7 +42,7 @@ export const Item = memo(function Item({ todo, dispatch, index, clrChange, todoS
         }
 
     }, [todoSelectedList])
-
+// Updated by Theja
     const handleChangeButton=(e)=>{
         toggleItem()
        
@@ -53,7 +54,7 @@ export const Item = memo(function Item({ todo, dispatch, index, clrChange, todoS
         }
        
     }
-
+//  Updated by Theja
     useEffect(() => {
         let timer
         if (clrChange) {

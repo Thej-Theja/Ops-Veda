@@ -6,8 +6,9 @@ import classnames from "classnames";
 
 import { TOGGLE_ALL } from "../constants";
 
-export function Main({ todos, dispatch, startTime, endTime }) {
+export function Main({ todos, dispatch }) {
     const { pathname: route } = useLocation();
+    // updated by Theja
     const [todoSelectedList, setTodoSelectedList] = useState([])
 
 
